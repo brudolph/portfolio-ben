@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans');
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Fjalla One', sans-serif;
+    color: #17bebb;
+}
+
+.designer-block {
+    background: url('../img/ben-designer-color.jpg') no-repeat left top;
+    background-size: cover;
+    height: 600px;
+}
+
+.designer-block h2 {
+    color: #fff;
+    margin: 20px 0 0 20px;
+}
+
+.developer-block {
+    background: url('../img/ben-developer-color-2.jpg') no-repeat right top;
+    background-size: cover;
+    height: 600px;
+}
+
+.developer-block h2 {
+    color: #fff;
+    margin: 20px 20px 0 0;
+}
