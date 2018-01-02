@@ -16,6 +16,12 @@ h1, h2, h3, h4, h5 {
     margin: 20px 0 0 20px;
 }
 
+.designer-block p {
+    color: #2e282a;
+    margin: 20px auto 0 20px;
+    width: 200px;
+}
+
 .developer-block {
     background: url('../img/ben-developer-color-2.jpg') no-repeat right top;
     background-size: cover;
@@ -25,4 +31,19 @@ h1, h2, h3, h4, h5 {
 .developer-block h2 {
     color: #fff;
     margin: 20px 20px 0 0;
+}
+
+.developer-block p {
+    color: #2e282a;
+    margin: 20px 20px 0 auto;
+    width: 200px;
+}
+
+.name-contact-bar {
+    padding: 20px 20px 0px 20px;
+}
+
+.name-contact-bar small {
+    font-size: 60%;
+    color: 
 }
