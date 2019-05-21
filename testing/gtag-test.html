@@ -28,7 +28,7 @@
 				var pageTitle = document.title.replace(PAGE_TITLE_PREFIX, '');
 
 				gtag('event', 'File Download', {
-					event_category: 'File Download - ' + pageTitle + ' - ' + el.html(),
+					event_category: 'File Download - ' + pageTitle + ' - ' + el.textContent(),
 					event_label: customLink,
 				});
 			}
