@@ -38,7 +38,8 @@
 					'click',
 					function(event) {
 						if (event.target.matches('a[href$=".pdf"], a[href$=".xls"], a[href$=".ppt"], a[href$=".doc"], a[href$=".jpg"], a[href$=".png"], a[href$=".mp4"]')) {
-							TrackFileDownload(this);
+              var item = event.target;
+							TrackFileDownload(item);
 						}
 					},false);
 			});
