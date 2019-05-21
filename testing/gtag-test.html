@@ -23,8 +23,8 @@
 			gtag('config', 'GA_MEASUREMENT_ID');
 
 			function TrackFileDownload(item) {
-				var el = $(item);
-				var customLink = el.attr('href').toLowerCase();
+				var el = item;
+				var customLink = el.getAttribute('href').toLowerCase();
 				var pageTitle = document.title.replace(PAGE_TITLE_PREFIX, '');
 
 				gtag('event', 'File Download', {
@@ -40,9 +40,7 @@
 						if (event.target.matches('a[href$=".pdf"], a[href$=".xls"], a[href$=".ppt"], a[href$=".doc"], a[href$=".jpg"], a[href$=".png"], a[href$=".mp4"]')) {
 							TrackFileDownload(this);
 						}
-					},
-					false
-				);
+					},false);
 			});
 		</script>
 	</head>
