@@ -11,7 +11,7 @@
 			if (!Element.prototype.matches) {
 				Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
 			}
-			var PAGE_TITLE_PREFIX = '[INSERT REPEATING PAGE TITLE]';
+			var PAGE_TITLE_PREFIX = 'Test';
       var GA_MEASUREMENT_ID = 'UA-140616137-1';
       
 			window.dataLayer = window.dataLayer || [];
@@ -20,7 +20,7 @@
 			}
 			gtag('js', new Date());
 
-			gtag('config', 'GA_MEASUREMENT_ID');
+			gtag('config', GA_MEASUREMENT_ID);
 
 			function TrackFileDownload(item) {
 				var el = item;
