@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140616137-1"></script>
+		<script>
+			if (!Element.prototype.matches) {
+				Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+			}
+			var PAGE_TITLE_PREFIX = '[INSERT REPEATING PAGE TITLE]';
+      var GA_MEASUREMENT_ID = 'UA-140616137-1';
+      
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'GA_MEASUREMENT_ID');
+
+			function TrackFileDownload(item) {
+				var el = $(item);
+				var customLink = el.attr('href').toLowerCase();
+				var pageTitle = document.title.replace(PAGE_TITLE_PREFIX, '');
+
+				gtag('event', 'File Download', {
+					event_category: 'File Download - ' + pageTitle + ' - ' + el.html(),
+					event_label: customLink,
+				});
+			}
+
+			document.addEventListener('DOMContentLoaded', function() {
+				document.documentElement.addEventListener(
+					'click',
+					function(event) {
+						if (event.target.matches('a[href$=".pdf"], a[href$=".xls"], a[href$=".ppt"], a[href$=".doc"], a[href$=".jpg"], a[href$=".png"], a[href$=".mp4"]')) {
+							TrackFileDownload(this);
+						}
+					},
+					false
+				);
+			});
+		</script>
+	</head>
+	<body>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente illum provident natus voluptas? Commodi sint temporibus animi magnam facilis, doloribus, consectetur mollitia fugiat fugit nostrum autem molestias inventore amet. Nam.</p>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente illum provident natus voluptas? Commodi sint temporibus animi magnam facilis, doloribus, consectetur mollitia fugiat fugit nostrum autem molestias inventore amet. Nam.</p>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente illum provident natus voluptas? Commodi sint <a href="myfile.pdf">temporibus animi magnam facilis</a>, doloribus, consectetur mollitia fugiat fugit nostrum autem molestias inventore amet. Nam.</p>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente illum provident natus voluptas? <a href="myfile.xls">Commodi sint temporibus animi magnam</a> facilis, doloribus, consectetur mollitia fugiat fugit nostrum autem molestias inventore amet. Nam.</p>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente illum provident natus voluptas? <a href="myfile.ppt">Commodi sint temporibus animi magnam facilis</a>, doloribus, consectetur mollitia fugiat fugit nostrum autem molestias inventore amet. Nam.</p>
+	</body>
+</html>
