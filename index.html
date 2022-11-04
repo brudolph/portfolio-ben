@@ -1,98 +1,24 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Rudolph - Developer/Designer</title>
-    <link rel="stylesheet" href="css/main.css">
-    		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140616137-1"></script>
-		<script>
-			if (!Element.prototype.matches) {
-				Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
-			}
-			var PAGE_TITLE_PREFIX = '[INSERT REPEATING PAGE TITLE]';
-      var GA_MEASUREMENT_ID = 'UA-140616137-1';
-      
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
 
-			gtag('config', 'GA_MEASUREMENT_ID');
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ben Rudolph - Developer/Designer</title>
+</head>
 
-			function TrackFileDownload(item) {
-				var el = item;
-				var customLink = el.getAttribute('href').toLowerCase();
-				var pageTitle = document.title.replace(PAGE_TITLE_PREFIX, '');
+<body>
 
-				gtag('event', 'File Download', {
-					event_category: 'File Download - ' + pageTitle + ' - ' + el.textContent,
-					event_label: customLink,
-				});
-			}
-
-			document.addEventListener('DOMContentLoaded', function() {
-				document.documentElement.addEventListener(
-					'click',
-					function(event) {
-						if (event.target.matches('a[href$=".pdf"], a[href$=".xls"], a[href$=".ppt"], a[href$=".doc"], a[href$=".jpg"], a[href$=".png"], a[href$=".mp4"]')) {
-              var item = event.target;
-							TrackFileDownload(item);
-						}
-					},false);
-			});
-		</script>
-  </head>
-  <body>
-
-    <div class="grid-x grid-padding-x name-contact-bar">
-      <div class="large-6 cell">
-        <h1>Ben Rudolph</h1>
-      </div>
-      <div class="large-6 cell text-right">
-        <h2><small><a href="mailto:webdudeben@icloud.com">webdudeben@icloud.com</a></small></h2>
-      </div>
+  <div class="grid-x grid-padding-x name-contact-bar">
+    <div class="large-6 cell">
+      <h1>Ben Rudolph</h1>
     </div>
-
-    <div class="grid-x grid-padding-x">
-
-      <div class="large-6 cell">
-        <div class="grid-x grid-padding-x">
-          <div class="large-12 cell developer-block text-right">
-            <h2>The Developer</h2>
-            <p>Born out of the necessity to code the sites I designed, web development has become a passion for me. </p>
-          </div>
-          <div class="large-12 cell">
-            <h2>Recent Projects</h2>
-            <ul>
-              <li>
-                <h3>University of Northern Colorado</h3>
-                <p>My last eight years as a developer was spent working for the University of Northern Colorado. Below are a few projects I worked on while at UNC.</p>
-              </li>
-            </ul>
-
-          </div> 
-        </div>
-      </div>
-
-      <div class="large-6 cell">
-        <div class="grid-x grid-padding-x">
-          <div class="large-12 cell designer-block">
-            <h2>The Designer</h2>
-            <p>From my early beginnings as a CAD operator, yearning to create, to my career as a graphic designer. </p>
-          </div>
-          <div class="large-12 cell">
-            <h2>Things I made</h2>
-            <p>For the past eight years my focus has been web development. But my passion for design has never died. </p>
-          </div>
-        </div>
-      </div>
-
+    <div class="large-6 cell text-right">
+      <h2><small><a href="mailto:momentumdd@me.com">momentumdd@me.com</a></small></h2>
     </div>
+  </div>
 
-    <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>
